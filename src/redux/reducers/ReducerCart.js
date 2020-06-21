@@ -1,5 +1,5 @@
 import * as actionTypes from '../constants/ActionTypes'
-import { timProductTrongCart } from '../constants/CommonFuncs'
+import { timIndexOfArr } from '../../utils/CommonFuncs'
 
 let reducerCart = (state = [], action) => {
     let stateTmp = [...state]
@@ -7,7 +7,7 @@ let reducerCart = (state = [], action) => {
     let { cart_product_arg, cart_quantity_arg } = action
     switch (action.type) {
         case actionTypes.ADD_CART:
-            idx = timProductTrongCart(cart_product_arg, stateTmp)
+            idx = timIndexOfArr(stateTmp, cart_product_arg.id)
             if (idx !== -1) {
                 stateTmp[idx].cart_quantity_arg += cart_quantity_arg
             } else {
@@ -18,13 +18,13 @@ let reducerCart = (state = [], action) => {
             }
             return stateTmp
         case actionTypes.DELETE_CART:
-            idx = timProductTrongCart(cart_product_arg, stateTmp)
+            idx = timIndexOfArr(stateTmp, cart_product_arg.id)
             if (idx !== -1) {
                 stateTmp.splice(idx, 1)
             }
             return stateTmp
         case actionTypes.EDIT_QUANTITY:
-            idx = timProductTrongCart(cart_product_arg, stateTmp)
+            idx = timIndexOfArr(stateTmp, cart_product_arg.id)
             if (idx !== -1) {
                 stateTmp[idx].cart_quantity_arg = cart_quantity_arg
             }

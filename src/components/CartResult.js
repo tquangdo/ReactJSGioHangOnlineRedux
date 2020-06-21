@@ -4,19 +4,11 @@ import * as msgs from '../redux/constants/ViewMessage'
 
 class CartResult extends React.Component {
   onClickThanhToan(cart_result_arg, product_inventory_arg) {
+    let { clickThanhToan, resetCart, changeMsg } = this.props
     if (cart_result_arg.length > 0) {
-      cart_result_arg.forEach((item_cart, index_cart) => {
-        product_inventory_arg.every((item_product, index_product) => {
-          if (item_product.id === item_cart.cart_product_arg.id) {
-            // update inventory
-            // let cart_item_tmp = clone(cart_item_arg) // lodash
-            this.props.editInventory(index_product, item_product.inventory - item_cart.cart_quantity_arg)
-            return false
-          } else return true
-        })
-      })
-      this.props.resetCart()
-      this.props.changeMsg(msgs.MSG_PAYMENT_OK)
+      clickThanhToan(cart_result_arg, product_inventory_arg)
+      resetCart()
+      changeMsg(msgs.MSG_PAYMENT_OK)
     }
   }
   hienTongTien(cart_result_arg) {

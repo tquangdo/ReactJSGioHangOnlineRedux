@@ -7,10 +7,26 @@ import PropTypes from 'prop-types'
 //Redux
 import { connect } from 'react-redux'
 import {
-  actionXoaCart, actionChangeMsg, actionEditQuantity, actionEditInventory, actionResetCart
+  actionXoaCart, actionChangeMsg, actionEditQuantity, actionSua1ColSPAPI, actionResetCart
 } from '../redux/actions/Action'
 
 class ContaCart extends React.Component {
+  clickThanhToan = (cart_result_arg, product_inventory_arg) => {
+    if (cart_result_arg.length > 0) {
+      cart_result_arg.forEach((item_cart, index_cart) => {
+        product_inventory_arg.every((item_product, index_product) => {
+          if (item_product.id === item_cart.cart_product_arg.id) {
+            let invenTmp = ((item_product.inventory - item_cart.cart_quantity_arg) < 0) ? 0 : item_product.inventory - item_cart.cart_quantity_arg
+            // update inventory
+            // let cart_item_tmp = clone(cart_item_arg) // lodash
+            // PATCH
+            this.props.editInventory(item_product.id, index_product, invenTmp)
+            return false
+          } else return true
+        })
+      })
+    }
+  }
   hienCartResult(cart_arg, product_arg) {
     let kqTraVe = null
     if (cart_arg.length > 0) {
@@ -18,7 +34,7 @@ class ContaCart extends React.Component {
         // phải truyền cho <CartResult> chứ KO được truyền <CartItem>
         cartResult={cart_arg}
         productInventory={product_arg}
-        editInventory={this.props.editInventory}
+        clickThanhToan={this.clickThanhToan}
         resetCart={this.props.resetCart}
         // phải truyền cho <CartResult> chứ KO được truyền <CartItem>
         changeMsg={this.props.changeMsg}
@@ -58,7 +74,7 @@ ContaCart.propTypes = {
   reduxprop_cart: PropTypes.arrayOf(
     PropTypes.shape({
       cart_product_arg: PropTypes.shape({
-        id: PropTypes.number,
+        id: PropTypes.string,
         name: PropTypes.string,
         image: PropTypes.string,
         desc: PropTypes.string,
@@ -93,8 +109,8 @@ const mapDispatch2Props = (dispatch) => {
     editQuantity: (cart_item_arg, cart_quantity_arg) => {
       dispatch(actionEditQuantity(cart_item_arg, cart_quantity_arg))
     },
-    editInventory: (product_arg, inventory_quantity_arg) => {
-      dispatch(actionEditInventory(product_arg, inventory_quantity_arg))
+    editInventory: (id_arg, idx_arg, inventory_quantity_arg) => {
+      dispatch(actionSua1ColSPAPI(id_arg, idx_arg, inventory_quantity_arg))
     },
     changeMsg: (change_msg_arg) => {
       dispatch(actionChangeMsg(change_msg_arg))

@@ -1,40 +1,48 @@
-let mock_list_items = [
+import React from 'react'
+import ContaTrangChu from "../containers/ContaTrangChu"
+import ContaNotFound from "../containers/ContaNotFound"
+import ContaSanphamList from "../containers/ContaSanphamList"
+import ContaSanphamAction from '../containers/ContaSanphamAction'
+
+var menu_list_items = [
     {
-        id: 1,
-        name: "Iphone 7 Plus",
-        image: "https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/H0/HH0H2/HH0H2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=K7ik72",
-        desc: "Sản phẩm do Apple sản xuất",
-        price: 500,
-        inventory: 50,
-        rating: 4
+        label: "Trang chủ",
+        to: "/",
+        exact: true
     },
     {
-        id: 2,
-        name: "Samsung galaxy S7",
-        image: "https://i.ya-webdesign.com/images/galaxy-s7-png-8.png",
-        desc: "Sản phẩm do Samsung sản xuất",
-        price: 480,
-        inventory: 48,
-        rating: 3
+        label: "[Admin] Quản lí sản phẩm",
+        to: "/sanpham-list",
+        exact: false
+    }
+]
+var route_items = [
+    {
+        path: "/",
+        exact: true,
+        component: () => <ContaTrangChu />
     },
     {
-        id: 3,
-        name: "Oppo F1s",
-        image: "https://img.favpng.com/0/9/16/oppo-f1s-oppo-r11-computer-cases-housings-screen-protectors-oppo-r9-png-favpng-ME0UFzmLJADQCJKLfYcNsWkKb_t.jpg",
-        desc: "Sản phẩm do China sản xuất",
-        price: 320,
-        inventory: 32,
-        rating: 1
+        path: "/sanpham-list", // PHẢI là "/sanpham-list", KO được là "/sanphamlist" để phân biệt với /add & /edit
+        exact: false,
+        component: () => <ContaSanphamList />
     },
     {
-        id: 4,
-        name: "Ipad pro 2020",
-        image: "https://www.pngitem.com/pimgs/m/479-4795187_ipad-pro-12-9-silver-hd-png-download.png",
-        desc: "Tablet do Apple sản xuất",
-        price: 700,
-        inventory: 70,
-        rating: 5
+        path: "/sanphamlist/add",
+        exact: false,
+        component: ({ history }) => <ContaSanphamAction historyObj={history} />
+    },
+    {
+        path: "/sanphamlist/:param_id/edit",
+        exact: false,
+        component: ({ match, history }) => <ContaSanphamAction matchObj={match} historyObj={history} />
+    },
+    // PHẢI để <ContaNotFound> sau cùng, nếu ko dù exact=true vẫn NG!!!
+    {
+        path: "",
+        exact: false,
+        component: () => <ContaNotFound />
     }
 ]
 
-export { mock_list_items }
+export { menu_list_items, route_items }

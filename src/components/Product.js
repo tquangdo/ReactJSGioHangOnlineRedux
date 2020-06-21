@@ -3,8 +3,12 @@ import * as msgs from '../redux/constants/ViewMessage'
 
 class Product extends React.Component {
   onClickThemCart(product_arg) {
-    this.props.themCart(product_arg)
-    this.props.changeMsg(msgs.MSG_CREATE_OK)
+    if (product_arg.inventory > 0) {
+      this.props.themCart(product_arg)
+      this.props.changeMsg(msgs.MSG_CREATE_OK)
+    } else {
+      this.props.changeMsg(msgs.MSG_INVENT_EMPTY)
+    }
   }
   hienRating(sao_arg) {
     let kqTraVe = []

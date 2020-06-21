@@ -5,9 +5,13 @@ import PropTypes from 'prop-types'
 import * as msgs from '../redux/constants/ViewMessage'
 //Redux
 import { connect } from 'react-redux'
-import { actionThemCart, actionChangeMsg } from '../redux/actions/Action'
+import { actionThemCart, actionChangeMsg, actionHienSPAPI } from '../redux/actions/Action'
 
 class ContaProducts extends React.Component {
+  componentDidMount() {
+    // SELECT
+    this.props.hienSPAPI()
+  }
   hienProducts(products_arg) {
     let kqTraVe = (
       <h2>{msgs.MSG_PRODUCT_EMPTY}</h2>
@@ -35,7 +39,7 @@ class ContaProducts extends React.Component {
 ContaProducts.propTypes = {
   reduxprop_products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
+      id: PropTypes.string,
       name: PropTypes.string,
       image: PropTypes.string,
       desc: PropTypes.string,
@@ -44,6 +48,7 @@ ContaProducts.propTypes = {
       rating: PropTypes.number
     })
   ),
+  hienSPAPI: PropTypes.func,
   themCart: PropTypes.func,
   changeMsg: PropTypes.func
 }
@@ -60,6 +65,9 @@ const mapDispatch2Props = (dispatch) => {
     },
     changeMsg: (change_msg_arg) => {
       dispatch(actionChangeMsg(change_msg_arg))
+    },
+    hienSPAPI: () => {
+      dispatch(actionHienSPAPI())
     }
   }
 }
