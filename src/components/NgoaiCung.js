@@ -123,6 +123,9 @@ class NgoaiCung extends React.Component {
             <Route exact path="/">
               <ContaTrangChu />
             </Route>
+            <Route exact path="/ReactJSGioHangOnlineRedux">
+              <ContaTrangChu />
+            </Route>
             <Route path="/sanphamlist/add" component={({ history }) => <ContaSanphamAction historyObj={history} />} />
             <Route path="/sanphamlist/:param_id/edit" component={({ match, history }) => <ContaSanphamAction matchObj={match} historyObj={history} />} />
             <Route path="/login">

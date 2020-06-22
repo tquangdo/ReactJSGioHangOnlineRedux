@@ -92,7 +92,7 @@ class Footer extends React.Component {
               <ul className="instagram-photos">
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (9).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (9).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
@@ -100,7 +100,7 @@ class Footer extends React.Component {
                 </li>
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (20).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (20).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
@@ -108,7 +108,7 @@ class Footer extends React.Component {
                 </li>
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (19).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (19).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
@@ -116,7 +116,7 @@ class Footer extends React.Component {
                 </li>
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (16).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (16).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
@@ -124,7 +124,7 @@ class Footer extends React.Component {
                 </li>
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (5).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (5).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
@@ -132,7 +132,7 @@ class Footer extends React.Component {
                 </li>
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (18).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (18).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
@@ -140,7 +140,7 @@ class Footer extends React.Component {
                 </li>
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (15).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (15).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
@@ -148,7 +148,7 @@ class Footer extends React.Component {
                 </li>
                 <li>
                   <div className="view overlay hm-white-slight z-depth-1">
-                    <img className="img-fluid" src="img/img (17).jpg" alt="" />
+                    <img className="img-fluid" src={process.env.PUBLIC_URL + "/img/img (17).jpg"} alt="" />
                     <a href="/">
                       <div className="mask waves-light waves-effect waves-light" />
                     </a>
