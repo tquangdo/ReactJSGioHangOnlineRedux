@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/ReactJSGioHangOnlineRedux/static/js/main.7354cf23.chunk.js",
+    "main.js.map": "/ReactJSGioHangOnlineRedux/static/js/main.7354cf23.chunk.js.map",
+    "runtime-main.js": "/ReactJSGioHangOnlineRedux/static/js/runtime-main.eb562922.js",
+    "runtime-main.js.map": "/ReactJSGioHangOnlineRedux/static/js/runtime-main.eb562922.js.map",
+    "static/js/2.6a381a7e.chunk.js": "/ReactJSGioHangOnlineRedux/static/js/2.6a381a7e.chunk.js",
+    "static/js/2.6a381a7e.chunk.js.map": "/ReactJSGioHangOnlineRedux/static/js/2.6a381a7e.chunk.js.map",
+    "index.html": "/ReactJSGioHangOnlineRedux/index.html",
+    "precache-manifest.35830275843a20a6cccac95646464002.js": "/ReactJSGioHangOnlineRedux/precache-manifest.35830275843a20a6cccac95646464002.js",
+    "service-worker.js": "/ReactJSGioHangOnlineRedux/service-worker.js",
+    "static/js/2.6a381a7e.chunk.js.LICENSE.txt": "/ReactJSGioHangOnlineRedux/static/js/2.6a381a7e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb562922.js",
+    "static/js/2.6a381a7e.chunk.js",
+    "static/js/main.7354cf23.chunk.js"
+  ]
+}
