@@ -41,7 +41,12 @@ class ContaSanphamAction extends React.Component {
     }
     this.props.historyObj.goBack()
   }
-  // click button "Sửa"
+  /**
+   * click button "Sửa"
+   * KO thể làm redux-form vì:
+   * 1) const { invalid, submitting, handleSubmit, } = this.props làm UNSAFE_componentWillReceiveProps() chạy sai
+   * 2) button "Thêm", "Sửa" là <Link to={path}>, KO phải normal kiểu onClick={func()}
+   */
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps && nextProps.reduxprop_sp_desua) {
       let { reduxprop_sp_desua } = nextProps

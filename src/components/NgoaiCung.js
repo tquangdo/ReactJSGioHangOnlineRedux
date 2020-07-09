@@ -8,6 +8,7 @@ import ContaNotFound from '../containers/ContaNotFound'
 import {
   ROOT_PATH, SPL_PATH, SPL_ADD_PATH, SPL_EDIT_PATH, LOGIN_PATH
 } from '../mocks/mockListItems'
+import Login from './Login'
 
 let isAuthenGlobal = false
 function RouteCaNhan({ children, ...rest }) {
@@ -30,66 +31,11 @@ function RouteCaNhan({ children, ...rest }) {
   )
 }
 
-class Login extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      txtUsername: '',
-      txtPW: '',
-      is_redir: false
-    }
-  }
-  onSubmitForm = (e) => {
-    e.preventDefault()
-    let { txtUsername, txtPW } = this.state
-    if (txtUsername === 'admin' && txtPW === 'admin') {
-      this.setState({ is_redir: true })
-      isAuthenGlobal = true
-      this.props.propsOnAuthen()
-    } else {
-      alert('Sai thông tin đăng nhập!!!')
-    }
-  }
-  onChangeInput = (e) => {
-    let { name, value } = e.target
-    this.setState({ [name]: value })
-  }
-  render() {
-    let { txtUsername, txtPW } = this.state
-    return (
-
-      <div className="row">
-        <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <form onSubmit={this.onSubmitForm}>
-            <div className="form-group">
-              <label>Username:</label>
-              <input type="text" className="form-control"
-                name="txtUsername"
-                value={txtUsername}
-                onChange={this.onChangeInput}
-                placeholder="Nhập username..." />
-            </div>
-            <div className="form-group">
-              <label>Password:</label>
-              <input type="password" className="form-control"
-                name="txtPW"
-                value={txtPW}
-                onChange={this.onChangeInput}
-                placeholder="Nhập password..." />
-            </div>
-
-            <button type="submit" className="btn btn-primary">Log in</button>
-          </form>
-        </div>
-      </div>
-    )
-  }
-}
-
 function AuthenButton() {
   let history = useHistory() // Hooks can only be called inside of the body of a function component
   const [is_authen, setIsAuthen] = useState(false)
   let onAuthen = () => {
+    isAuthenGlobal = true
     setIsAuthen(true)
     history.push(SPL_PATH)
   }
