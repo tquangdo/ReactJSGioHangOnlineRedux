@@ -5,6 +5,7 @@ import SanPhamList from '../components/SanPhamList'
 //Redux
 import { connect } from 'react-redux'
 import { actionHienSPAPI, actionXoaSPAPI } from '../redux/actions/Action'
+import { SPL_ADD_PATH } from '../mocks/mockListItems'
 
 class ContaSanphamList extends React.Component {
   componentDidMount() {
@@ -35,7 +36,7 @@ class ContaSanphamList extends React.Component {
     let { reduxprop_splist } = this.props
     return (
       <div>
-        <Link to="/sanphamlist/add" className="btn btn-info" >Thêm sản phẩm</Link>
+        <Link to={SPL_ADD_PATH} className="btn btn-info" >Thêm sản phẩm</Link>
         <br /><br />
         <SanPhamList>{this.hienSanPhamItem(reduxprop_splist)}</SanPhamList>
       </div>

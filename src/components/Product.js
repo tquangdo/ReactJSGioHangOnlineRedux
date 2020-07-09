@@ -1,5 +1,6 @@
 import React from 'react'
 import * as msgs from '../redux/constants/ViewMessage'
+import { ROOT_PATH } from '../mocks/mockListItems'
 
 class Product extends React.Component {
   onClickThemCart(product_arg) {
@@ -28,14 +29,14 @@ class Product extends React.Component {
         <div className="card text-center card-cascade narrower">
           <div className="view overlay hm-white-slight z-depth-1">
             <img src={product.image} className="img-fluid" alt={product.name} width="800" height="800" />
-            <a href="/">
+            <a href={ROOT_PATH}>
               <div className="mask waves-light waves-effect waves-light" />
             </a>
           </div>
           <div className="card-body">
             <h4 className="card-title">
               <strong>
-                <a href="/">{product.name}</a>
+                <a href={ROOT_PATH}>{product.name}</a>
               </strong>
             </h4>
             <ul className="rating">

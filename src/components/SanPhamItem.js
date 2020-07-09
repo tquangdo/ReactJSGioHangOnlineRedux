@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ROOT_PATH } from '../mocks/mockListItems'
 
 class SanPhamItem extends React.Component {
   render() {
@@ -14,7 +15,7 @@ class SanPhamItem extends React.Component {
         <td>{list.inventory} </td>
         <td>
           <Link
-            to={`/sanphamlist/${list.id}/edit`}
+            to={ROOT_PATH + `/sanphamlist/${list.id}/edit`}
             className="btn btn-success"
           >Sửa
           </Link>

@@ -4,36 +4,41 @@ import ContaNotFound from "../containers/ContaNotFound"
 import ContaSanphamList from "../containers/ContaSanphamList"
 import ContaSanphamAction from '../containers/ContaSanphamAction'
 
+export const ROOT_PATH = "/ReactJSGioHangOnlineRedux"
+export const LOGIN_PATH = ROOT_PATH + "/login"
+export const SPL_PATH = ROOT_PATH + "/sanpham-list"
+export const SPL_ADD_PATH = ROOT_PATH + "/sanphamlist/add"
+export const SPL_EDIT_PATH = ROOT_PATH + "/sanphamlist/:param_id/edit"
 var menu_list_items = [
     {
         label: "Trang chủ",
-        to: "/",
+        to: ROOT_PATH,
         exact: true
     },
     {
         label: "[Admin] Quản lí sản phẩm",
-        to: "/sanpham-list",
+        to: SPL_PATH,
         exact: false
     }
 ]
 var route_items = [
     {
-        path: "/",
+        path: ROOT_PATH,
         exact: true,
         component: () => <ContaTrangChu />
     },
     {
-        path: "/sanpham-list", // PHẢI là "/sanpham-list", KO được là "/sanphamlist" để phân biệt với /add & /edit
+        path: SPL_PATH, // PHẢI là "/sanpham-list", KO được là "/sanphamlist" để phân biệt với /add & /edit
         exact: false,
         component: () => <ContaSanphamList />
     },
     {
-        path: "/sanphamlist/add",
+        path: SPL_ADD_PATH,
         exact: false,
         component: ({ history }) => <ContaSanphamAction historyObj={history} />
     },
     {
-        path: "/sanphamlist/:param_id/edit",
+        path: SPL_EDIT_PATH,
         exact: false,
         component: ({ match, history }) => <ContaSanphamAction matchObj={match} historyObj={history} />
     },

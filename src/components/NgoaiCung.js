@@ -5,6 +5,9 @@ import ContaSanphamList from '../containers/ContaSanphamList'
 import ContaSanphamAction from '../containers/ContaSanphamAction'
 import ContaTrangChu from '../containers/ContaTrangChu'
 import ContaNotFound from '../containers/ContaNotFound'
+import {
+  ROOT_PATH, SPL_PATH, SPL_ADD_PATH, SPL_EDIT_PATH, LOGIN_PATH
+} from '../mocks/mockListItems'
 
 let isAuthenGlobal = false
 function RouteCaNhan({ children, ...rest }) {
@@ -17,7 +20,7 @@ function RouteCaNhan({ children, ...rest }) {
         ) : (
             <Redirect
               to={{
-                pathname: "/login",
+                pathname: LOGIN_PATH,
                 state: { from: location }
               }}
             />
@@ -88,11 +91,11 @@ function AuthenButton() {
   const [is_authen, setIsAuthen] = useState(false)
   let onAuthen = () => {
     setIsAuthen(true)
-    history.push("/sanpham-list")
+    history.push(SPL_PATH)
   }
   let signOut = () => {
     setIsAuthen(false)
-    history.push("/")
+    history.push(ROOT_PATH)
   }
   return (
     is_authen ? (
@@ -120,20 +123,17 @@ class NgoaiCung extends React.Component {
           <AuthenButton />
           <Menu></Menu>
           <Switch>
-            <Route exact path="/">
+            <Route exact path={ROOT_PATH}>
               <ContaTrangChu />
             </Route>
-            <Route exact path="/ReactJSGioHangOnlineRedux">
-              <ContaTrangChu />
-            </Route>
-            <Route path="/sanphamlist/add" component={({ history }) => <ContaSanphamAction historyObj={history} />} />
-            <Route path="/sanphamlist/:param_id/edit" component={({ match, history }) => <ContaSanphamAction matchObj={match} historyObj={history} />} />
-            <Route path="/login">
+            <Route path={SPL_ADD_PATH} component={({ history }) => <ContaSanphamAction historyObj={history} />} />
+            <Route path={SPL_EDIT_PATH} component={({ match, history }) => <ContaSanphamAction matchObj={match} historyObj={history} />} />
+            <Route path={LOGIN_PATH}>
               <div>
                 <h1>Bạn phải login trước!!!</h1>
               </div>
             </Route>
-            <RouteCaNhan path="/sanpham-list">
+            <RouteCaNhan path={SPL_PATH}>
               <ContaSanphamList />
             </RouteCaNhan>
             <Route path="">

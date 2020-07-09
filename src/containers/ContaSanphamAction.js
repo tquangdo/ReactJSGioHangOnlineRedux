@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 //Redux
 import { connect } from 'react-redux'
 import { actionThemSPAPI, actionLaySPAPI, actionSuaSPAPI } from '../redux/actions/Action'
+import { SPL_PATH } from '../mocks/mockListItems'
 
 class ContaSanphamAction extends React.Component {
   constructor(props) {
@@ -114,7 +115,7 @@ class ContaSanphamAction extends React.Component {
                 onChange={this.hamOnChange}
                 placeholder="Input số hàng tồn kho..." />
             </div>
-            <Link to="/sanpham-list" className="btn btn-danger mr-10">
+            <Link to={SPL_PATH} className="btn btn-danger mr-10">
               Trở lại
           </Link>
             {" "}
