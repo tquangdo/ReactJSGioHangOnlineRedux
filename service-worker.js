@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ReactJSGioHangOnlineRedux/precache-manifest.84e15695f6a24877fcad1fcecc180f69.js"
+  "/ReactJSGioHangOnlineRedux/precache-manifest.87bf5889aba33e5ba016ca3f3af66c1e.js"
 );
 
 self.addEventListener('message', (event) => {
