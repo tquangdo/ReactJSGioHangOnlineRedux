@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ReactJSGioHangOnlineRedux/static/js/main.55620cdf.chunk.js",
-    "main.js.map": "/ReactJSGioHangOnlineRedux/static/js/main.55620cdf.chunk.js.map",
+    "main.js": "/ReactJSGioHangOnlineRedux/static/js/main.29a31116.chunk.js",
+    "main.js.map": "/ReactJSGioHangOnlineRedux/static/js/main.29a31116.chunk.js.map",
     "runtime-main.js": "/ReactJSGioHangOnlineRedux/static/js/runtime-main.eb562922.js",
     "runtime-main.js.map": "/ReactJSGioHangOnlineRedux/static/js/runtime-main.eb562922.js.map",
-    "static/js/2.6a381a7e.chunk.js": "/ReactJSGioHangOnlineRedux/static/js/2.6a381a7e.chunk.js",
-    "static/js/2.6a381a7e.chunk.js.map": "/ReactJSGioHangOnlineRedux/static/js/2.6a381a7e.chunk.js.map",
+    "static/js/2.cc766b21.chunk.js": "/ReactJSGioHangOnlineRedux/static/js/2.cc766b21.chunk.js",
+    "static/js/2.cc766b21.chunk.js.map": "/ReactJSGioHangOnlineRedux/static/js/2.cc766b21.chunk.js.map",
     "index.html": "/ReactJSGioHangOnlineRedux/index.html",
-    "precache-manifest.87bf5889aba33e5ba016ca3f3af66c1e.js": "/ReactJSGioHangOnlineRedux/precache-manifest.87bf5889aba33e5ba016ca3f3af66c1e.js",
+    "precache-manifest.64db649955dd74d341c62d35b7feaa1f.js": "/ReactJSGioHangOnlineRedux/precache-manifest.64db649955dd74d341c62d35b7feaa1f.js",
     "service-worker.js": "/ReactJSGioHangOnlineRedux/service-worker.js",
-    "static/js/2.6a381a7e.chunk.js.LICENSE.txt": "/ReactJSGioHangOnlineRedux/static/js/2.6a381a7e.chunk.js.LICENSE.txt"
+    "static/js/2.cc766b21.chunk.js.LICENSE.txt": "/ReactJSGioHangOnlineRedux/static/js/2.cc766b21.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.eb562922.js",
-    "static/js/2.6a381a7e.chunk.js",
-    "static/js/main.55620cdf.chunk.js"
+    "static/js/2.cc766b21.chunk.js",
+    "static/js/main.29a31116.chunk.js"
   ]
 }
