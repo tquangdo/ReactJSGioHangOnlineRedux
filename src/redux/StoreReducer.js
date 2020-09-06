@@ -8,5 +8,4 @@ var storeReducer = createStore(myReducer, compose(
 // storeReducer.subscribe(() => {
 //     console.log(storeReducer.getState())
 // })
-// npm install gh-pages --save-dev
 export default storeReducer

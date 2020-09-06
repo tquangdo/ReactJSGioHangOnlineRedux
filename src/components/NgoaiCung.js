@@ -67,7 +67,7 @@ class Login extends React.Component {
                 name="txtUsername"
                 value={txtUsername}
                 onChange={this.onChangeInput}
-                placeholder="Nhập username..." />
+                placeholder="Nhập username...(admin/admin)" />
             </div>
             <div className="form-group">
               <label>Password:</label>
