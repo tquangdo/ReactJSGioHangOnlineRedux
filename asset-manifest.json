@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/react-redux-giohang-online/static/js/main.440fdff7.chunk.js",
-    "main.js.map": "/react-redux-giohang-online/static/js/main.440fdff7.chunk.js.map",
+    "main.js": "/react-redux-giohang-online/static/js/main.4d4e2359.chunk.js",
+    "main.js.map": "/react-redux-giohang-online/static/js/main.4d4e2359.chunk.js.map",
     "runtime-main.js": "/react-redux-giohang-online/static/js/runtime-main.518d0ddf.js",
     "runtime-main.js.map": "/react-redux-giohang-online/static/js/runtime-main.518d0ddf.js.map",
     "static/js/2.fbca594b.chunk.js": "/react-redux-giohang-online/static/js/2.fbca594b.chunk.js",
     "static/js/2.fbca594b.chunk.js.map": "/react-redux-giohang-online/static/js/2.fbca594b.chunk.js.map",
     "index.html": "/react-redux-giohang-online/index.html",
-    "precache-manifest.f081323469e4acbcaed26b497c817364.js": "/react-redux-giohang-online/precache-manifest.f081323469e4acbcaed26b497c817364.js",
+    "precache-manifest.0b3c8c7f4a773a0f7d3485470f644679.js": "/react-redux-giohang-online/precache-manifest.0b3c8c7f4a773a0f7d3485470f644679.js",
     "service-worker.js": "/react-redux-giohang-online/service-worker.js",
     "static/js/2.fbca594b.chunk.js.LICENSE.txt": "/react-redux-giohang-online/static/js/2.fbca594b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.518d0ddf.js",
     "static/js/2.fbca594b.chunk.js",
-    "static/js/main.440fdff7.chunk.js"
+    "static/js/main.4d4e2359.chunk.js"
   ]
 }
