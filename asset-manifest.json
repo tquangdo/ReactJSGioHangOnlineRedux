@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ReactJSGioHangOnlineRedux/static/js/main.4efd04c5.chunk.js",
-    "main.js.map": "/ReactJSGioHangOnlineRedux/static/js/main.4efd04c5.chunk.js.map",
-    "runtime-main.js": "/ReactJSGioHangOnlineRedux/static/js/runtime-main.cc58dbf8.js",
-    "runtime-main.js.map": "/ReactJSGioHangOnlineRedux/static/js/runtime-main.cc58dbf8.js.map",
-    "static/js/2.fbca594b.chunk.js": "/ReactJSGioHangOnlineRedux/static/js/2.fbca594b.chunk.js",
-    "static/js/2.fbca594b.chunk.js.map": "/ReactJSGioHangOnlineRedux/static/js/2.fbca594b.chunk.js.map",
-    "index.html": "/ReactJSGioHangOnlineRedux/index.html",
-    "precache-manifest.1f97b65b236507e50030291d234e05b1.js": "/ReactJSGioHangOnlineRedux/precache-manifest.1f97b65b236507e50030291d234e05b1.js",
-    "service-worker.js": "/ReactJSGioHangOnlineRedux/service-worker.js",
-    "static/js/2.fbca594b.chunk.js.LICENSE.txt": "/ReactJSGioHangOnlineRedux/static/js/2.fbca594b.chunk.js.LICENSE.txt"
+    "main.js": "/react-redux-giohang-online/static/js/main.440fdff7.chunk.js",
+    "main.js.map": "/react-redux-giohang-online/static/js/main.440fdff7.chunk.js.map",
+    "runtime-main.js": "/react-redux-giohang-online/static/js/runtime-main.518d0ddf.js",
+    "runtime-main.js.map": "/react-redux-giohang-online/static/js/runtime-main.518d0ddf.js.map",
+    "static/js/2.fbca594b.chunk.js": "/react-redux-giohang-online/static/js/2.fbca594b.chunk.js",
+    "static/js/2.fbca594b.chunk.js.map": "/react-redux-giohang-online/static/js/2.fbca594b.chunk.js.map",
+    "index.html": "/react-redux-giohang-online/index.html",
+    "precache-manifest.f081323469e4acbcaed26b497c817364.js": "/react-redux-giohang-online/precache-manifest.f081323469e4acbcaed26b497c817364.js",
+    "service-worker.js": "/react-redux-giohang-online/service-worker.js",
+    "static/js/2.fbca594b.chunk.js.LICENSE.txt": "/react-redux-giohang-online/static/js/2.fbca594b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cc58dbf8.js",
+    "static/js/runtime-main.518d0ddf.js",
     "static/js/2.fbca594b.chunk.js",
-    "static/js/main.4efd04c5.chunk.js"
+    "static/js/main.440fdff7.chunk.js"
   ]
 }
