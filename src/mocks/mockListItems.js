@@ -1,4 +1,4 @@
-export const ROOT_PATH = "/ReactJSGioHangOnlineRedux"
+export const ROOT_PATH = "/react-redux-giohang-online"
 export const LOGIN_PATH = ROOT_PATH + "/login"
 export const SPL_PATH = ROOT_PATH + "/sanpham-list"
 export const SPL_ADD_PATH = ROOT_PATH + "/sanphamlist/add"

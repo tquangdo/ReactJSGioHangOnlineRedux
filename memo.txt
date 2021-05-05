@@ -1,7 +1,7 @@
 1/ gh-pages
 1.1) npm install gh-pages --save-dev
 1.2) package.json:
-  "homepage": "http://tquangdo.github.io/ReactJSGioHangOnlineRedux",
+  "homepage": "http://tquangdo.github.io/<reponame>",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
